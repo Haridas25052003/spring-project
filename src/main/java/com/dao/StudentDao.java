@@ -15,7 +15,10 @@ public class StudentDao {
 
 
 	public int insertStudent(Student s) {
-		return 0;
+		
+		String sql="insert into Student(name,city,percentage) values(?,?,?)";
+		
+		return j.update(sql,new Object[] {s.getName(),s.getCity(),s.getPercentage()});
 	}
 
 }
