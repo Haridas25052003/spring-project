@@ -25,6 +25,6 @@ public class App
     	
     	System.out.println(sd.insertStudent(s));
     	
-        System.out.println( "Hello World!" );
+        //System.out.println( "Hello World!" );
     }
 }

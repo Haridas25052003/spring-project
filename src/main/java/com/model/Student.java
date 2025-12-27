@@ -29,6 +29,10 @@ public class Student {
 	public void setPercentage(double percentage) {
 		this.percentage = percentage;
 	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", city=" + city + ", percentage=" + percentage + "]";
+	}
 	
 	
   

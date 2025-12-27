@@ -2,19 +2,24 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
-        <beans>
-            <bean id="sd" class="com.dao.StudentDao">
-                <property name="j" ref="jt"></property>
-           
-            </bean>
-            <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate"></bean>
-            <property name="dataSource" ref="ds"></property>
-        
-            <bean id="ds" class="org.springframework.jdbc.dataSource.DriverManagerDataSource">
-              <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-              <property name="url" value="jdbc:mysql://localhost:3306/spdb"></property>
-              <property name="username" value="root"></property>
-              <property name="password" value="root123"></property>
-              
-            </bean>
-        </beans>
+<beans>
+
+    <!-- StudentDao Bean -->
+    <bean id="sd" class="com.dao.StudentDao">
+        <property name="j" ref="jt"/>
+    </bean>
+
+    <!-- JdbcTemplate Bean -->
+    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="ds"/>
+    </bean>
+
+    <!-- DataSource Bean -->
+    <bean id="ds" class="org.springframework.jdbc.dataSource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/spdb"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root123"/>
+    </bean>
+
+</beans>
